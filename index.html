@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>HelpDesk</title>
+</head>
+
+<body>
+    <!-- hearder------------------------------------------------------------------------------------->
+    <header class="header">
+        <div class="logo-et-titre">
+            <div class="logo">H</div>
+            <h3 class="titre-logo">HelpDesk</h3>
+        </div>
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <!-- main==================================== -->
+    <main>
+        <h1>Gestion des demandes</h1>
+        <p class="paraghraph">Suivez et gérez les incidents informatiques.</p>
+        <section class="section1">
+            <h2>Créer une demande</h2>
+            <p class="paraghraph">Décrivez votre problème informatique.</p>
+            <form>
+                <div class="element">
+                    <label for="probleme" class="element-furmulaire">Titre du problème *</label><br />
+                    <input type="text" id="probleme" name="probleme" placeholder="Connexion Wi-Fi instable"
+                        required /><br>
+                        <p class="titleErreur hidden">Champ invalid</p>
+                </div>
+                <div class="element">
+                    <label for="priorite" class="element-furmulaire">Priorité *</label><br>
+                    <select id="priorite" name="priorite"><br>
+                        <option value="Haute">Haute</option>
+                        <option value="Moyenne">Moyenne</option>
+                        <option value="Basse">Basse</option>
+                    </select><br>
+                </div>
+                <div class="element">
+                    <label for="Categorie" class="element-furmulaire">Catégorie *</label><br>
+                    <select id="Categorie" name="Categorie"><br>
+                        <option value="Réseau">Réseau</option>
+                        <option value="Logiciel">Logiciel</option>
+                        <option value="Matériel">Matériel</option>
+                    </select><br>
+                </div>
+                <div class="element">
+                    <label for="description" class="element-furmulaire">Description :</label><br>
+                    <textarea id="description" name="description" placeholder="Décrivez votre problème..."
+                        required></textarea><br>
+                        <p class="title-description-Erreur hidden">Champ invalid</p>
+                </div>
+
+
+                <button type="button" class="button" id="btn-ajouter">
+                    + Ajouter la demande
+                </button>
+
+            </form>
+        </section>
+        <div>
+            <h2 class="Titre-main">Liste des demandes</h2>
+        </div>
+        <div id="liste-demandes">
+
+        </div>
+         <div class="message_de_confirmation hidden"> 
+                <h2>tu veux suprimer ?.</h2>
+                <div class="buttons_de_confirmation ">
+                <button type="button" id="btn_annuler" class="btn_confirmation">Annuler</button>
+                <button  type="button" id="btn_confirm" class="btn_confirmation">Confirm</button>
+                </div>
+         </div> 
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
